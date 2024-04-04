@@ -1,4 +1,4 @@
-export const useServiceWorker = () => {
+export function useServiceWorker() {
   const registerServiceWorker = () => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

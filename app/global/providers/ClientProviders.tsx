@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react'
 import { useServiceWorker } from '@/app/global/hooks/useServiceWorker'
+import { RecoilRoot } from 'recoil'
 
 function ClientProviders({ children }: { children: React.ReactNode }) {
   const { registerServiceWorker, requestNotificationPermission } =
@@ -12,7 +13,7 @@ function ClientProviders({ children }: { children: React.ReactNode }) {
     requestNotificationPermission()
   }, [])
 
-  return <>{children}</>
+  return <RecoilRoot>{children}</RecoilRoot>
 }
 
 export default ClientProviders
